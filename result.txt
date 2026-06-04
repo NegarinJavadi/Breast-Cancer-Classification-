@@ -1,0 +1,98 @@
+Breast Cancer Classification
+
+Loading dataset from UCI repository...
+
+Dataset info:
+  Samples  : 569
+  Features : 30
+
+Target distribution:
+Diagnosis
+B            357
+M            212
+
+Encoded: B=0 (Benign=357)  M=1 (Malignant=212)
+
+After feature engineering: 30 features
+
+=======================================================
+ MODEL COMPARISON
+=======================================================
+
+Logistic Regression
+ CV Accuracy : 0.974 ± 0.015
+ Test Acc : 0.965
+ AUC-ROC : 0.996
+              precision    recall  f1-score   support
+
+      Benign       0.96      0.99      0.97        72
+   Malignant       0.97      0.93      0.95        42
+
+    accuracy                           0.96       114
+   macro avg       0.97      0.96      0.96       114
+weighted avg       0.97      0.96      0.96       114
+
+
+KNN
+ CV Accuracy : 0.965 ± 0.019
+ Test Acc : 0.956
+ AUC-ROC : 0.982
+              precision    recall  f1-score   support
+
+      Benign       0.95      0.99      0.97        72
+   Malignant       0.97      0.90      0.94        42
+
+    accuracy                           0.96       114
+   macro avg       0.96      0.95      0.95       114
+weighted avg       0.96      0.96      0.96       114
+
+
+SVM
+ CV Accuracy : 0.976 ± 0.008
+ Test Acc : 0.974
+ AUC-ROC : 0.993
+              precision    recall  f1-score   support
+
+      Benign       0.96      1.00      0.98        72
+   Malignant       1.00      0.93      0.96        42
+
+    accuracy                           0.97       114
+   macro avg       0.98      0.96      0.97       114
+weighted avg       0.97      0.97      0.97       114
+
+
+Random Forest
+ CV Accuracy : 0.963 ± 0.015
+ Test Acc : 0.965
+ AUC-ROC : 0.994
+              precision    recall  f1-score   support
+
+      Benign       0.95      1.00      0.97        72
+   Malignant       1.00      0.90      0.95        42
+
+    accuracy                           0.96       114
+   macro avg       0.97      0.95      0.96       114
+weighted avg       0.97      0.96      0.96       114
+
+
+XGBoost
+ CV Accuracy : 0.967 ± 0.016
+ Test Acc : 0.974
+ AUC-ROC : 0.994
+              precision    recall  f1-score   support
+
+      Benign       0.96      1.00      0.98        72
+   Malignant       1.00      0.93      0.96        42
+
+    accuracy                           0.97       114
+   macro avg       0.98      0.96      0.97       114
+weighted avg       0.97      0.97      0.97       114
+
+
+★  Best model by AUC: Logistic Regression (0.996)
+
+Plot saved as project_results.png
+Correlation heatmap saved as project_correlation.png
+
+Generating SHAP explanation...
+SHAP plot saved as project_shap.png
